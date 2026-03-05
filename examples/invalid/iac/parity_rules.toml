@@ -1,0 +1,3 @@
+required_equal = ["terraform.required_version"]
+allowed_different = []
+

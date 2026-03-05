@@ -1,0 +1,10 @@
+[policy]
+rotation = "weekly"
+handoff_day = "monday"
+primary_timeout_minutes = 10
+secondary_timeout_minutes = 10
+
+[escalation]
+levels = ["primary", "secondary", "manager"]
+max_total_minutes = 30
+

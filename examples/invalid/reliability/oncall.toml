@@ -1,0 +1,4 @@
+[policy]
+primary_timeout_minutes = 60
+secondary_timeout_minutes = 60
+

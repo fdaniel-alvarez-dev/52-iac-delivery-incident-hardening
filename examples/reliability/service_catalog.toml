@@ -1,0 +1,18 @@
+[[services]]
+name = "platform-api"
+tier = "critical"
+owner = "platform-team"
+runbook = "docs/runbooks/03-incident-mttr.md"
+slo_availability = 99.9
+slo_latency_p95_ms = 300
+alerts = ["high_error_rate", "high_latency", "pod_crashloop"]
+
+[[services]]
+name = "identity-worker"
+tier = "important"
+owner = "platform-team"
+runbook = "docs/runbooks/03-incident-mttr.md"
+slo_availability = 99.5
+slo_latency_p95_ms = 800
+alerts = ["queue_lag", "pod_crashloop"]
+

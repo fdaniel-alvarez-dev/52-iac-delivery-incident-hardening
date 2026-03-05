@@ -1,0 +1,10 @@
+[metadata]
+runner = "github-actions"
+triggers = ["push"]
+max_parallel = 5
+
+[stages.apply]
+steps = ["terraform_apply"]
+requires_approval = false
+allowed_branches = ["*"]
+

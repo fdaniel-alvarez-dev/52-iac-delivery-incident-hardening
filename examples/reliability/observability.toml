@@ -1,0 +1,13 @@
+[signals]
+logs = true
+metrics = true
+traces = true
+
+[dashboards]
+primary = "dash-platform-overview"
+
+[alert_routing]
+pager = "pagerduty"
+chat = "#oncall-platform"
+escalation_minutes = 10
+

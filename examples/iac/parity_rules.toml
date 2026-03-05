@@ -1,0 +1,17 @@
+# Keys that are expected to be identical across environments (drift here is risky).
+required_equal = [
+  "terraform.required_version",
+  "providers.aws.version",
+  "modules.network.version",
+  "state.backend",
+  "state.region",
+  "state.encryption",
+]
+
+# Keys that are allowed to differ between dev and prod.
+allowed_different = [
+  "state.bucket",
+  "state.lock_table",
+  "workload.instance_count",
+]
+

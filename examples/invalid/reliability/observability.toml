@@ -1,0 +1,8 @@
+[signals]
+logs = true
+metrics = false
+traces = false
+
+[alert_routing]
+escalation_minutes = 60
+

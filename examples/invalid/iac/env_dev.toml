@@ -1,0 +1,17 @@
+[env]
+name = "dev"
+
+[terraform]
+required_version = "latest"
+
+[state]
+backend = "local"
+encryption = false
+
+[providers.aws]
+version = "*"
+
+[modules.network]
+source = "git::https://example.com/iac/modules/network.git"
+version = "main"
+

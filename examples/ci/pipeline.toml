@@ -1,0 +1,22 @@
+[metadata]
+runner = "github-actions"
+triggers = ["pull_request", "push"]
+concurrency_group = "iac-${ref}"
+max_parallel = 1
+
+[stages.validate]
+steps = ["format", "lint", "unit_tests", "terraform_validate"]
+timeout_minutes = 15
+
+[stages.plan]
+steps = ["terraform_plan"]
+produces_artifacts = ["planfile"]
+required_on_pr = true
+timeout_minutes = 20
+
+[stages.apply]
+steps = ["terraform_apply"]
+requires_approval = true
+allowed_branches = ["main"]
+timeout_minutes = 30
+
